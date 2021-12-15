@@ -1,0 +1,33 @@
+Format: 1.8
+Date: Sat, 20 Feb 2021 18:28:38 -0500
+Source: linux-upstream
+Binary: linux-headers-5.4.87-ti-rt-r23 linux-image-5.4.87-ti-rt-r23 linux-libc-dev
+Architecture: armhf
+Version: 1xross
+Distribution: focal
+Urgency: low
+Maintainer: main <main@cpdev>
+Changed-By: main <main@cpdev>
+Description:
+ linux-headers-5.4.87-ti-rt-r23 - Linux kernel headers for 5.4.87-ti-rt-r23 on armhf
+ linux-image-5.4.87-ti-rt-r23 - Linux kernel, version 5.4.87-ti-rt-r23
+ linux-libc-dev - Linux support headers for userspace development
+Changes:
+ linux-upstream (1xross) focal; urgency=low
+ .
+   * Custom built Linux kernel.
+Checksums-Sha1:
+ 6546c94eede593f8141bbcca9bf6cbae88ccd244 11551080 linux-headers-5.4.87-ti-rt-r23_1xross_armhf.deb
+ e34da08fe01dce1b302c76c6e913c6e0256aa774 32367700 linux-image-5.4.87-ti-rt-r23_1xross_armhf.deb
+ 929324ae76d532c2d3574c64ba36747e1bb87467 1054340 linux-libc-dev_1xross_armhf.deb
+ fecdd970c5fdb290bbbe05b4338998bf3f18bf12 6001 linux-upstream_1xross_armhf.buildinfo
+Checksums-Sha256:
+ 6b4430928bae5c05104718ebf9c6ad094a5d22f8d8038f1cd09bd88cd2dabf25 11551080 linux-headers-5.4.87-ti-rt-r23_1xross_armhf.deb
+ dc9b785254eea9ba8604e809bb03ee3315e678f9c659badf712d2704d4a66c2b 32367700 linux-image-5.4.87-ti-rt-r23_1xross_armhf.deb
+ 8a4456326331b728c427cb811943aa4b451a82890cf8ebe351625b64e43080c0 1054340 linux-libc-dev_1xross_armhf.deb
+ aabb8f7c3a51cfc56fc85c5e8e70df7f5a28286bf62563845954a86d7078a6ba 6001 linux-upstream_1xross_armhf.buildinfo
+Files:
+ d670b251b013f2ccb22ce934f251cdfc 11551080 kernel optional linux-headers-5.4.87-ti-rt-r23_1xross_armhf.deb
+ a1045c02b1e48dbc7e50b20a119532b8 32367700 kernel optional linux-image-5.4.87-ti-rt-r23_1xross_armhf.deb
+ fbd71c5a9c697ceda2e7fd4db39fc9a4 1054340 devel optional linux-libc-dev_1xross_armhf.deb
+ b9a9546b20ddbb191cf43869b7fdabf3 6001 kernel optional linux-upstream_1xross_armhf.buildinfo
