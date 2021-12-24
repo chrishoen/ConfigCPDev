@@ -6,6 +6,7 @@ SectionBegin default
 
    // Device path.
    HostDevPath            /dev/ttyUSB0
+   HostDevPath            /dev/ttyACM0
 
    // Delays.
    Delay1                 1000
