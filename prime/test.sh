@@ -1,7 +1,6 @@
 #!/bin/sh
 
-sudo ldconfig
-rlfe sudo /opt/prime/bin/Test
+sudo /opt/prime/bin/testlibusb
 
 
 
