@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo /opt/prime/bin/testlibusb
+sudo /opt/prime/bin/Test
 
 
 
