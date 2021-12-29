@@ -1,5 +1,4 @@
 #!/bin/sh
 
-#sudo modprobe usbserial vendor=0x0525 product=0xa4a6
-sudo modprobe usbserial vendor=0x1234 product=0xabcd
+sudo modprobe usbserial vendor=0x112b product=0x000d
 
