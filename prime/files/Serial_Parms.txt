@@ -1,0 +1,23 @@
+//********************************************************************
+//********************************************************************
+//********************************************************************
+// bbx  bbx bbx bbx bbx bbx bbx bbx bbx bbx bbx bbx bbx bbx bbx bbx
+
+SectionBegin Default
+
+   // Serial port setup.
+   SerialPortDevice            /dev/ttyACM0
+   SerialPortSetup             115200,N,8,1
+   SerialRxTimeout             0
+
+	// Serial string port termination modes.
+	TxTermMode                  CRLF
+	RxTermMode                  LF
+
+   // Transfer mode variables.
+   ReadAllFlag                 true
+   WriteAllFlag                false
+   RxReqNumBytes               10000
+
+SectionEnd
+

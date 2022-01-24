@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo ldconfig
-rlfe sudo /opt/prime/bin/ExampleThread1
+sudo /opt/prime/bin/ExampleThread1
 
 
 

@@ -27,9 +27,12 @@ namespace Ris
 //******************************************************************************
 //******************************************************************************
 // Constants.
-   
-static const int cSerialTermMode_LF   = 0;
-static const int cSerialTermMode_CRLF = 1;
+
+// Serial string termination modes.
+static const int cSerialTermMode_NULL = 0; // Null terminated.
+static const int cSerialTermMode_LF   = 1; // LF   (\n,10)
+static const int cSerialTermMode_CR   = 2; // CR   (\r,13)
+static const int cSerialTermMode_CRLF = 3; // CRLF (\r\n,13,10)
 
 //******************************************************************************
 //******************************************************************************
@@ -64,7 +67,11 @@ public:
    // Termination mode. LF (\n,10) or CRLF (\r\n,13,10).
    int mTermMode;
 
-   // Termination mode. LF (\n,10) or CRLF (\r\n,13,10).
+   // Termination modes.
+   int mTxTermMode;
+   int mRxTermMode;
+
+   // If true then use RS485.
    bool m485Flag;
 
    // Thread processor number and priority.
@@ -97,9 +104,19 @@ public:
    SerialSettings();
    void reset();
 
-   void setPortDevice(char* aPortDevice);
-   void setPortSetup(char* aPortSetup);
+   // Port config.
+   void setPortDevice(const char* aPortDevice);
+   void setPortSetup(const char* aPortSetup);
+
 };
+
+//******************************************************************************
+//******************************************************************************
+//******************************************************************************
+// Helpers. Serial port settings termination mode strings.
+
+int int_from_string_SerialSettingsTermMode(const char* aTermMode);
+char* string_from_int_SerialSettingsTermMode(int aTermMode);
 
 //******************************************************************************
 //******************************************************************************

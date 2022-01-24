@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo ldconfig
-rlfe sudo /opt/prime/bin/LcdGraphics
+sudo /opt/prime/bin/LcdGraphics
 
 
 
