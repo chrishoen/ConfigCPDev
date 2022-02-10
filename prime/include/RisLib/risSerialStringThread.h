@@ -22,13 +22,13 @@ namespace Ris
 //******************************************************************************
 // Serial string thread.
 //
-// This is a thread that provides the execution context for 
+// This is a thread that provides the execution context for byte content
 // string communication via a serial port.
 //
-// It contains a serial port.
+// It contains a serial string port.
 //
 // The data that is communicated via the serial port is encapsulated according
-// to the strings that are terminated with a newline. It sends and receives
+// to the byte content messaging scheme. It sends and receives byte content
 // strings.
 //
 // The thread is structured around a while loop that does a read call to
@@ -65,7 +65,7 @@ public:
    SerialSettings mSettings;
 
    // Serial string port.
-   SerialStringPort mSerialPort;
+   SerialStringPort mSerialStringPort;
 
    // Rx string.
    char mRxString[cMaxStringSize];
@@ -102,10 +102,10 @@ public:
    // Members.
 
    // Metrics.
-   int mTxCount;
-   int mTxLength;
+   int mErrorCount;
+   int mRestartCount;
    int mRxCount;
-   int mRxError;
+   int mTxCount;
 
    //***************************************************************************
    //***************************************************************************

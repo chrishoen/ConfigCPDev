@@ -78,6 +78,11 @@ public:
    int    mWorkingLength;
    int    mMaxLength;
 
+   // Marker members.
+   int mMarkerStartIndex;
+   int mMarkerEndIndex;
+   int mMarkerLength;
+
    // Copy direction. This specifies the direction of copy operations.
    // Copy to does a put, copy from does a get.
    static const int cCopyTo   = 0;
@@ -132,6 +137,7 @@ public:
    void  reset();
    void  rewind();
    void  forward     (int aByteSize=1);
+   void  reverse     (int aByteSize = 1);
    void  advance     (int aByteSize=1);
    void  fillZero    (int aByteSize=1);
 
@@ -152,6 +158,11 @@ public:
    // Get the buffer address at the working index.
    char* getPositionC ();
    void* getPositionV ();
+
+   // Buffer working index marker.
+   void setMarkerStart();
+   int  setMarkerEnd();
+   int  getMarkerLength();
 
    //***************************************************************************
    //***************************************************************************
@@ -213,6 +224,20 @@ public:
    void copy          (ByteContent* content);
    void putToBuffer   (ByteContent* content);
    void getFromBuffer (ByteContent* content);
+
+   //***************************************************************************
+   //***************************************************************************
+   //***************************************************************************
+   // Methods, peek operations.
+
+   // Peek at a value from the buffer, if the value of the buffer direction
+   // flag is copyFrom. This is the same as a copyFrom followed by a reverse.
+   void peek(unsigned char* aValue);
+   void peek(unsigned short* aValue);
+   void peek(unsigned int* aValue);
+   void peek(char* aValue);
+   void peek(short* aValue);
+   void peek(int* aValue);
 };
 
 //***************************************************************************

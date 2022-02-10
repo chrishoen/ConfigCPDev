@@ -63,6 +63,7 @@ public:
 
    // Constructor.
    BaseMsgMonkey(CreateMsgFunctionT aCreate,DestroyMsgFunctionT aDestroy = 0);
+   virtual ~BaseMsgMonkey() {}
 
    //***************************************************************************
    //***************************************************************************
@@ -80,6 +81,12 @@ public:
 
    // Preprocess a message before it is sent.
    virtual void processBeforeSend(Ris::ByteContent* aMsg){};
+
+   // Postprocess a message after it is sent.
+   virtual void processAfterSend(Ris::ByteBuffer* aBuffer, Ris::ByteContent* aMsg) {};
+
+   // Postprocess a message after it is received.
+   virtual void processAfterReceive(Ris::ByteBuffer* aBuffer, Ris::ByteContent* aMsg) {};
 
    // Copy a message to a byte buffer.
    void putMsgToBuffer (Ris::ByteBuffer* aBuffer,Ris::ByteContent* aMsg);
