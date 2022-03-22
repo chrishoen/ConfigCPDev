@@ -12,8 +12,11 @@ SectionBegin Default
 
 	// Serial string port termination modes.
 	TxTermMode                  CRLF
-	RxTermMode                  LF
+   RxTermMode                  LF
 
+	TxTermMode                  CR
+   RxTermMode                  CRLF
+	
    // If true then use checksums.
    CheckSumFlag                false
 

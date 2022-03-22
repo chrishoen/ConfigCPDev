@@ -1,1 +1,0 @@
-24cb 0002 tee -a /sys/bus/usb-serial/drivers/ftdi_sio/new_id

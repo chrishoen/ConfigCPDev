@@ -1,12 +1,14 @@
 #pragma once
 
 /*==============================================================================
-Periodic thread base class.
+Random periodic thread base class.
 ==============================================================================*/
 
 //******************************************************************************
 //******************************************************************************
 //******************************************************************************
+
+#include <random>
 
 #include "risThreadsThreads.h"
 #include "risStatistics.h"
@@ -23,9 +25,9 @@ namespace Threads
 //******************************************************************************
 //******************************************************************************
 //******************************************************************************
-// This provides a base class for periodic timer threads. Inheritors provide
-// a timer handler function that gets called periodically. It inherits from
-// the thread base class to obtain basic thread functionality.
+// This provides a base class for randomly aperiodic timer threads. Inheritors
+// provide a timer handler function that gets called aperiodically. It inherits
+// from the thread base class to obtain basic thread functionality.
 // 
 // This also measures execution times and provides statistics on periodic
 // jitter and on the exection time of the inheritor supplied timer handler
@@ -35,7 +37,7 @@ namespace Threads
 // are calculated at a specific period. The results are latched and can be
 // polled by a monitoring thread.
 
-class  BasePeriodicThread : public BaseThread
+class  BaseRandomThread : public BaseThread
 {
 public:
 
@@ -46,9 +48,11 @@ public:
    //***************************************************************************
    // Members.
 
-   // Timer period, microseconds. This is the periodic time that the inheritor
-   // timer handler function gets called.
-   int mTimerPeriodUs;
+   // Timer interval range, microseconds. These provide the bounds for a
+   // uniform random number generator that generates a random sleep interval.
+   // The inheritor timer handler function gets called after the random sleep.
+   int mTimerPeriodUs1;
+   int mTimerPeriodUs2;
 
    // Timer count incremented at each timer handler execution.
    int mTimerCount;
@@ -56,6 +60,15 @@ public:
    // If true then get the thread processor number when the statistics
    // are finished.
    bool mPollProcessor;
+
+   //***************************************************************************
+   //***************************************************************************
+   //***************************************************************************
+   // Members.
+
+   // Random numbers.
+   std::mt19937 mRandomGenerator;
+   std::uniform_int_distribution<> mRandomDistribution;
 
    //***************************************************************************
    //***************************************************************************
@@ -119,7 +132,7 @@ public:
    // Methods.
 
    // Constructor.
-   BasePeriodicThread(); 
+   BaseRandomThread(); 
 
    //***************************************************************************
    //***************************************************************************
