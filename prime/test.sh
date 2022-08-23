@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo /opt/prime/bin/Test
+/opt/prime/bin/TimerThreadTest
 
 
 

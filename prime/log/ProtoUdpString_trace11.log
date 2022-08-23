@@ -1,0 +1,12 @@
+  0.000 $ ProcThread::threadInitFunction
+  0.000 $ UdpStringThread::threadInitFunction
+  0.000 $ UdpStringSocket     PASS Rx          0.0.0.0 : 56001 Tx    192.168.1.134 : 56002
+  0.000 $ UdpStringThread::threadInitFunction done
+  0.000 $ UdpStringThread::threadRunFunction
+  0.000 $ ProcThread::threadInitFunction done
+  0.000 $ UdpStringSocket::doReceiveString
+667.634 $ UdpStringThread::shutdownThread
+667.634 $ UdpStringSocket CLOSED
+667.634 $ UdpStringThread::threadRunFunction done
+667.634 $ UdpStringThread::threadExitFunction
+667.634 $ UdpStringThread::shutdownThread done

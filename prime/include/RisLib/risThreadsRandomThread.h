@@ -39,27 +39,40 @@ namespace Threads
 
 class  BaseRandomThread : public BaseThread
 {
+private:
+   typedef Ris::Threads::BaseThread BaseClass;
 public:
 
-   typedef Ris::Threads::BaseThread BaseClass;
-
    //***************************************************************************
    //***************************************************************************
    //***************************************************************************
-   // Members.
+   // Members. Inheritors set these before thread launch.
 
    // Timer interval range, microseconds. These provide the bounds for a
    // uniform random number generator that generates a random sleep interval.
    // The inheritor timer handler function gets called after the random sleep.
-   int mTimerPeriodUs1;
-   int mTimerPeriodUs2;
-
-   // Timer count incremented at each timer handler execution.
-   int mTimerCount;
+   // The bounds are calculated as
+   // [IntervalMeanMs*1000 - IntervalRandomUs, IntervalMeanMs*1000 + IntervalRandomUs].
+   int mIntervalMeanMs;
+   int mIntervalRandomUs;
 
    // If true then get the thread processor number when the statistics
    // are finished.
    bool mPollProcessor;
+
+   //***************************************************************************
+   //***************************************************************************
+   //***************************************************************************
+   // Members. 
+
+   // Timer interval range, microseconds. These provide the bounds for a
+   // uniform random number generator that generates a random sleep interval.
+   // The inheritor timer handler function gets called after the random sleep.
+   int mIntervalUs1;
+   int mIntervalUs2;
+
+   // Timer count incremented at each timer handler execution.
+   int mTimerCount;
 
    //***************************************************************************
    //***************************************************************************

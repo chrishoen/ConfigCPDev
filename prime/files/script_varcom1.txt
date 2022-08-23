@@ -1,0 +1,25 @@
+first
+enable
+echo 1
+home
+ready
+waitstop
+loop 100000
+   move 50000
+   waitstop
+   move -50000
+   waitstop
+endloop
+exit
+
+
+
+first
+enable
+echo 1
+home
+ready
+waitstop
+exit
+
+

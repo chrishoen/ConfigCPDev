@@ -1,0 +1,49 @@
+  0.000 $ TcpMsgSocket       PASS    192.168.1.134 : 55001
+  0.000 $ ClientThread::threadInitFunction done
+  0.001 $ TcpMsgClientThread CONNECTED
+  0.001 $ TcpMsgSocket doSendMsg 28
+  2.063 $ ERROR TcpMsgSocket INVALID READ
+  2.063 $ TcpMsgClientThread DISCONNECTED
+  2.563 $ TcpMsgClientThread CONNECTED
+  2.563 $ TcpMsgSocket doSendMsg 28
+  4.615 $ ERROR TcpMsgSocket INVALID READ
+  4.615 $ TcpMsgClientThread DISCONNECTED
+  5.115 $ TcpMsgClientThread CONNECTED
+  5.115 $ TcpMsgSocket doSendMsg 28
+  7.172 $ ERROR TcpMsgSocket INVALID READ
+  7.172 $ TcpMsgClientThread DISCONNECTED
+  7.673 $ TcpMsgClientThread CONNECTED
+  7.673 $ TcpMsgSocket doSendMsg 28
+  9.717 $ ERROR TcpMsgSocket INVALID READ
+  9.717 $ TcpMsgClientThread DISCONNECTED
+ 10.217 $ TcpMsgClientThread CONNECTED
+ 10.217 $ TcpMsgSocket doSendMsg 28
+ 12.273 $ ERROR TcpMsgSocket INVALID READ
+ 12.273 $ TcpMsgClientThread DISCONNECTED
+ 12.774 $ TcpMsgClientThread CONNECTED
+ 12.774 $ TcpMsgSocket doSendMsg 28
+ 14.832 $ ERROR TcpMsgSocket INVALID READ
+ 14.832 $ TcpMsgClientThread DISCONNECTED
+ 15.333 $ TcpMsgClientThread CONNECTED
+ 15.333 $ TcpMsgSocket doSendMsg 28
+ 17.395 $ ERROR TcpMsgSocket INVALID READ
+ 17.395 $ TcpMsgClientThread DISCONNECTED
+ 17.897 $ TcpMsgClientThread CONNECTED
+ 17.897 $ TcpMsgSocket doSendMsg 28
+ 19.931 $ ERROR TcpMsgSocket INVALID READ
+ 19.931 $ TcpMsgClientThread DISCONNECTED
+ 20.432 $ TcpMsgClientThread CONNECTED
+ 20.432 $ TcpMsgSocket doSendMsg 28
+ 24.952 $ ERROR TcpMsgSocket INVALID READ
+ 24.952 $ TcpMsgClientThread DISCONNECTED
+ 25.453 $ TcpMsgClientThread CONNECTED
+ 25.453 $ TcpMsgSocket doSendMsg 28
+ 27.514 $ ERROR TcpMsgSocket INVALID READ
+ 27.514 $ TcpMsgClientThread DISCONNECTED
+ 28.015 $ TcpMsgClientThread CONNECTED
+ 28.015 $ TcpMsgSocket doSendMsg 28
+ 28.716 $ ClientThread::shutdownThread
+ 28.716 $ ClientThread::threadExitFunction
+ 28.716 $ ERROR TcpMsgSocket INVALID READ
+ 28.716 $ ClientThread::threadExitFunction done
+ 28.716 $ ClientThread::shutdownThread done

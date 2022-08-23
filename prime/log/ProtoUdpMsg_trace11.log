@@ -1,0 +1,17 @@
+  0.009 $ UdpMsgThread::threadInitFunction
+  0.009 $ UdpRxMsgSocket     PASS          0.0.0.0 : 56001
+  0.009 $ UdpTxMsgSocket     PASS    192.168.1.134 : 56002
+  0.009 $ UdpMsgThread::threadInitFunction done
+  0.009 $ UdpMsgThread::threadRunFunction
+  0.009 $ UdpRxMsgSocket::doReceiveMsg
+  0.009 $ PeerThread::threadInitFunction done
+  1.219 $ PeerThread::shutdownThread
+  1.219 $ PeerThread::threadExitFunction
+  1.219 $ UdpMsgThread::shutdownThread
+  1.219 $ UdpRxMsgSocket CLOSED
+  1.219 $ UdpMsgThread::threadRunFunction recv msg ERROR
+  1.219 $ UdpMsgThread::threadRunFunction done
+  1.219 $ UdpMsgThread::threadExitFunction
+  1.219 $ UdpMsgThread::shutdownThread done
+  1.219 $ PeerThread::threadExitFunction done
+  1.219 $ PeerThread::shutdownThread done

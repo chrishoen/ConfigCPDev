@@ -8,7 +8,7 @@ SectionBegin default
    TestMode               1
 
    // Thread variables.
-   PollProcessor          true
+   PollProcessor          false
    TestThreadProcessor    -1
    TestThreadPriority     98
 
